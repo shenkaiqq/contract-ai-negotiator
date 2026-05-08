@@ -43,7 +43,8 @@ cd contract-negotiation-multi-agent
 source venv/bin/activate  # Windows: venv\Scripts\activate
 ```
 # 安装依赖
-```pip install -e .
+```
+pip install -e 
 ```
 
 ### 配置
@@ -51,12 +52,12 @@ source venv/bin/activate  # Windows: venv\Scripts\activate
 # 复制环境变量模板
 ```
 cp .env.example .env
-```
-# 编辑.env，填入你的OpenAI API密钥
-# OPENAI_API_KEY=sk-your-key-here
 
+编辑.env，填入你的OpenAI API密钥
+OPENAI_API_KEY=sk-your-key-here
+```
 ### 运行
-bash
+
 # 使用示例合同
 ```
 python src/main.py
@@ -90,9 +91,7 @@ contract = """
 report = orchestrator.analyze_contract(contract)
 ```
 # 输出:
-# 风险等级: 高风险
-# 建议策略: 坚持恢复原条款
-# 建议话术: "考虑到本项目由我方全额出资..."
+
 🎯 核心创新点
 对抗性生成: 内建"对方律师模拟Agent"，实现双向博弈推演
 
@@ -102,22 +101,10 @@ report = orchestrator.analyze_contract(contract)
 
 结构化通信: Agent间使用JSON格式传递信息，防止信息污染
 
-详见架构文档
-
-🤝 贡献
-欢迎贡献代码！请查看 CONTRIBUTING.md
-
-🐛 报告Bug
-
-💡 功能建议
-
-🔧 Pull Request
 
 ⚠️ 免责声明
 本系统仅作为辅助工具，不构成法律建议。重要合同决策请咨询专业律师。
 
-📄 许可证
-MIT License - 详见 LICENSE
 
 🌟 致谢
 OpenAI - GPT模型
