@@ -32,43 +32,55 @@ text
 
 ### 安装
 
-```bash
+
 # 克隆仓库
+```
 git clone https://github.com/yourusername/contract-negotiation-multi-agent.git
 cd contract-negotiation-multi-agent
-
+```
 # 创建虚拟环境
-python -m venv venv
+```python -m venv venv
 source venv/bin/activate  # Windows: venv\Scripts\activate
-
+```
 # 安装依赖
-pip install -e .
-配置
-bash
-# 复制环境变量模板
-cp .env.example .env
+```pip install -e .
+```
 
+### 配置
+
+# 复制环境变量模板
+```
+cp .env.example .env
+```
 # 编辑.env，填入你的OpenAI API密钥
 # OPENAI_API_KEY=sk-your-key-here
-运行
+
+### 运行
 bash
 # 使用示例合同
+```
 python src/main.py
-
+```
 # 或作为CLI工具
+```
 contract-agent --contract examples/sample_contracts/software_dev.txt
-Docker 运行
-bash
+```
+# Docker 运行
+```
 docker build -t contract-agent .
 docker run -e OPENAI_API_KEY=your_key contract-agent
-📖 使用示例
-python
+```
+
+### 📖 使用示例
+```
 from src.orchestrator import MultiAgentOrchestrator
-
+```
 # 初始化系统
+```
 orchestrator = MultiAgentOrchestrator()
-
+```
 # 分析合同
+```
 contract = """
 第5条 知识产权
 原条款：项目知识产权归甲方。
@@ -76,7 +88,7 @@ contract = """
 """
 
 report = orchestrator.analyze_contract(contract)
-
+```
 # 输出:
 # 风险等级: 高风险
 # 建议策略: 坚持恢复原条款
